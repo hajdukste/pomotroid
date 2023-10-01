@@ -45,13 +45,13 @@ export default {
       } else if (this.currentRound === 'short-break') {
         this.$store.dispatch('setCurrentRound', 'work')
         this.$store.dispatch('incrementRound')
-        EventBus.$emit('ready-work')
+        // EventBus.$emit('ready-work')
         logger.info('short break completed')
         ipcRenderer.send('onBreak', false)
       } else if (this.currentRound === 'long-break') {
         this.$store.dispatch('setCurrentRound', 'work')
         this.$store.dispatch('resetRound')
-        EventBus.$emit('ready-work')
+        // EventBus.$emit('ready-work')
         logger.info('long break completed')
         ipcRenderer.send('onBreak', false)
       }
